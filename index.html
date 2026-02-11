@@ -28,8 +28,9 @@
 
     <script type="text/javascript">
         function onTelegramAuth(user) {
-            console.log(user);
-            alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+            const redirectUri = "myapp://login";
+            const userJson = encodeURIComponent(JSON.stringify(user));
+            window.location.href = `${redirectUri}?user=${userJson}`;
         }
     </script>
 </body>
