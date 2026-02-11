@@ -2,7 +2,6 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         body {
@@ -10,7 +9,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 50vh;
         }
     </style>
 </head>
@@ -21,7 +20,7 @@
         data-size="large"
         data-userpic="true"
         data-request-access="write"
-        data-onauth="onTelegramAuth">
+        data-onauth="onTelegramAuth(user)">
     </script>
 
     <script type="text/javascript">
