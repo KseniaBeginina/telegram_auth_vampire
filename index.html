@@ -25,9 +25,8 @@
 
     <script type="text/javascript">
         window.onTelegramAuth = function(user) {
-            if (window.TelegramAndroid) {
-                TelegramAndroid.onAuth(JSON.stringify(user));
-            }
+            const userJson = encodeURIComponent(JSON.stringify(user));
+            window.location.href = `myapp://login?user=${userJson}`;
         }
     </script>
 
