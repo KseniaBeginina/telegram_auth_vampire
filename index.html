@@ -15,13 +15,22 @@
 </head>
 
 <body>
-    <script src="https://telegram.org/js/telegram-widget.js?22"
-        data-telegram-login="VampireClub_bot"
-        data-size="large"
-        data-userpic="true"
-        data-request-access="write"
-        data-onauth="onTelegramAuth(user)">
-    </script>
+    <div style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+    ">
+        <script src="https://telegram.org/js/telegram-widget.js?22"
+            data-telegram-login="VampireClub_bot"
+            data-size="large"
+            data-userpic="true"
+            data-request-access="write"
+            data-onauth="onTelegramAuth(user)">
+        </script>
+    </div>
 
     <script type="text/javascript">
         function onTelegramAuth(user) {
