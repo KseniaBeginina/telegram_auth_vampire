@@ -24,9 +24,12 @@
     </script>
 
     <script type="text/javascript">
-        function onTelegramAuth(user) {
-            TelegramAndroid.onAuth(JSON.stringify(user));
+        window.onTelegramAuth = function(user) {
+            if (window.TelegramAndroid) {
+                TelegramAndroid.onAuth(JSON.stringify(user));
+            }
         }
     </script>
+
 </body>
 </html>
