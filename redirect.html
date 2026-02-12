@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirect to App</title>
+</head>
+<body>
+<script>
+const params = new URLSearchParams(window.location.search);
+const user = params.get('user');
+
+if (user) {
+    // Редирект на кастомный URI Android
+    window.location.href = `myapp://login?user=${user}`;
+} else {
+    document.body.innerHTML = "<p style='color:red'>Ошибка: данные пользователя не переданы</p>";
+}
+</script>
+</body>
+</html>
