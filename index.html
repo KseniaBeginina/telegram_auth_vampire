@@ -9,7 +9,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 50vh;
+            height: 100vh;
         }
     </style>
 </head>
@@ -25,9 +25,7 @@
 
     <script type="text/javascript">
         function onTelegramAuth(user) {
-            const redirectUri = "myapp://login";
-            const userJson = encodeURIComponent(JSON.stringify(user));
-            window.location.href = `${redirectUri}?user=${userJson}`;
+            TelegramAndroid.onAuth(JSON.stringify(user));
         }
     </script>
 </body>
