@@ -26,7 +26,7 @@
     <script type="text/javascript">
         window.onTelegramAuth = function(user) {
             const userJson = encodeURIComponent(JSON.stringify(user));
-            window.location.href = `myapp://login?user=${userJson}`;
+            window.location.href = `redirect.html?user=${userJson}`;
         }
     </script>
 
