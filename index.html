@@ -38,9 +38,14 @@
     </div>
 
     <script type="text/javascript">
-        window.onTelegramAuth = function(user) {
-            const userJson = encodeURIComponent(JSON.stringify(user));
-            window.location.href = `redirect.html?user=${userJson}`;
+        //window.onTelegramAuth = function(user) {
+            //const userJson = encodeURIComponent(JSON.stringify(user));
+            //window.location.href = `redirect.html?user=${userJson}`;
+        //}
+
+        function onTelegramAuth(user) {
+            const userJson = JSON.stringify(user);
+            Android.onAuth(userJson);
         }
     </script>
 
