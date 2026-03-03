@@ -11,7 +11,7 @@ const user = params.get('user');
 
 if (user) {
     // Редирект на кастомный URI Android
-    window.location.href = `https://kseniabeginina.github.io/telegram_auth_vampire/?user=${user}`;
+    window.location.href = `myapp://login?user=${user}`;
 } else {
     document.body.innerHTML = "<p style='color:red'>Ошибка: данные пользователя не переданы</p>";
 }
