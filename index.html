@@ -43,7 +43,7 @@
             //window.location.href = `redirect.html?user=${userJson}`;
         //}
 
-        function onTelegramAuth(user) {
+        window.onTelegramAuth = function(user) {
             const userJson = JSON.stringify(user);
             Android.onAuth(userJson);
         }
