@@ -38,15 +38,9 @@
     </div>
 
     <script type="text/javascript">
-        //window.onTelegramAuth = function(user) {
-            //const userJson = encodeURIComponent(JSON.stringify(user));
-            //window.location.href = `redirect.html?user=${userJson}`;
-        //}
-
         window.onTelegramAuth = function(user) {
             const userJson = encodeURIComponent(JSON.stringify(user));
-            // Важно: URL должен быть тот же, где WebView ловит параметр
-            window.location.href = `https://kseniabeginina.github.io/telegram_auth_vampire/?user=${userJson}`;
+            window.location.href = `redirect.html?user=${userJson}`;
         }
     </script>
 
